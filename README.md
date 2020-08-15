@@ -1,2 +1,2 @@
 # Brevis
-A simple URL shortener API with Python and FastAPI.
+A simple URL shortener API with Python and Flask.
