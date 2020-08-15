@@ -1,1 +1,1 @@
-web: gunicorn wsgi:brevis
+web: gunicorn wsgi:app
