@@ -5,7 +5,7 @@ Brevis is live at:
 https://brevis-shortener.herokuapp.com/
 
 ## Brevis URL Shortener
-Brevis accepts a POST request containing a JSON formatted as such:
+Brevis accepts a POST request to `/shorten` containing a JSON formatted as such:
 
 `{"url":"Long URL goes here."}`
 
