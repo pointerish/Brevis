@@ -26,8 +26,8 @@ def redirect_to_url(url_id):
 def root():
     html = '''
     <h1>Brevis URL Shortener</h1>
-    <p>Brevis accepts a POST request containing a JSON formatted as such:<li>{"url":"Long URL goes here."}</li>
-    This POST request will return a json containing the id of the URL and the client should then send a GET request to
+    <p>Brevis accepts a POST request to <i>/shorten</i> containing a JSON formatted as such:<br/><li>{"url":"Long URL goes here."}</li><br/>
+    This POST request will return a json like this:<br/> <li> {shortened_url : URLID}</li></p> <p>The client should then send a GET request to
     https://brevis-shortener.herokuapp.com/URLID which will redirect to the original URL.</p>
     <p> Of course, the Heroku domain is long and beats the purpose of the shortener, but this is just a proof of concept and a learning 
     project.</p> 
