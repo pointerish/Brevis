@@ -1,13 +1,15 @@
 <html>
     <head>
-        <title>Brevis URL Shortener</title>
+        <title>Brevis<i>h</i> URL Shortener</title>
     </head>
     <body>
-        <h1>Brevis URL Shortener</h1>
-        <p>Brevis accepts a POST request to <i>/shorten</i> containing a JSON formatted as such:<br/><li>{"url":"Long URL goes here."}</li><br/>
+        <h1>Brevis<i>h</i> URL Shortener</h1>
+        <p>Brevis<i>h</i> accepts a POST request to <i>/shorten</i> containing a JSON formatted as such:<br/><li>{"url":"Long URL goes here."}</li><br/>
         This POST request will return a json like this:<br/> <li> {shortened_url : URLID}</li></p> <p>The client should then send a GET request to
         https://brevis-shortener.herokuapp.com/URLID which will redirect to the original URL.</p>
         <p> Of course, the Heroku domain is long and beats the purpose of the shortener, but this is just a proof of concept and a learning 
         project.</p> 
+        <p>Note: There is another URL Shortener tool called Brevis which is way nicer and with a nice looking UI here: https://brevisapp.herokuapp.com/ </p>
+        <p>I had no intentions to plagiarize and that's why I've added an h to the name of mine.</p>
     </body>
 </html>
