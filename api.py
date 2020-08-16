@@ -4,8 +4,12 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 from flask import redirect
+from flask import render_template
+
+# from forms import URLForm
 
 app = Flask(__name__)
+# app.config['SECRET_KEY'] = 'fa61f46c18568ef572057ce5c47f415c'
 
 @app.route('/shorten', methods=['POST'])
 def shorten():
@@ -23,13 +27,6 @@ def redirect_to_url(url_id):
     return redirect(original_url)
 
 @app.route('/')
+@app.route('/home')
 def root():
-    html = '''
-    <h1>Brevis URL Shortener</h1>
-    <p>Brevis accepts a POST request to <i>/shorten</i> containing a JSON formatted as such:<br/><li>{"url":"Long URL goes here."}</li><br/>
-    This POST request will return a json like this:<br/> <li> {shortened_url : URLID}</li></p> <p>The client should then send a GET request to
-    https://brevis-shortener.herokuapp.com/URLID which will redirect to the original URL.</p>
-    <p> Of course, the Heroku domain is long and beats the purpose of the shortener, but this is just a proof of concept and a learning 
-    project.</p> 
-    '''
-    return html
+    return render_template('home.html')    
