@@ -29,4 +29,4 @@ def redirect_to_url(url_id):
 @app.route('/')
 @app.route('/home')
 def root():
-    return render_template('home.html')    
+    return render_template('home.html')
