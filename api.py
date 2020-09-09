@@ -1,20 +1,17 @@
 import json
-import hashlib
+from hashlib import shake_256
 from flask import Flask
 from flask import jsonify
 from flask import request
 from flask import redirect
 from flask import render_template
 
-# from forms import URLForm
-
 app = Flask(__name__)
-# app.config['SECRET_KEY'] = 'fa61f46c18568ef572057ce5c47f415c'
 
 @app.route('/shorten', methods=['POST'])
 def shorten():
     url = request.json['url']
-    shortened_url = hashlib.shake_256(url.encode()).hexdigest(5)
+    shortened_url = shake_256(url.encode()).hexdigest(5)
     with open('urls.json', 'a') as urls:
         json.dump({shortened_url:url}, urls)
     return jsonify({'shortened_url':shortened_url})
