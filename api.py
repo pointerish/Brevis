@@ -8,8 +8,10 @@ from flask import render_template
 
 app = Flask(__name__)
 
-@app.route('/shorten', methods=['POST'])
+@app.route('/shorten', methods=['POST', 'GET'])
 def shorten():
+    if request.method == 'GET':
+        return render_template('home.html')
     url = request.json['url']
     shortened_url = shake_256(url.encode()).hexdigest(5)
     with open('urls.json', 'a') as urls:
