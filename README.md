@@ -2,7 +2,7 @@
 A simple URL shortener API with Python and Flask.
 
 Brevis is live at:
-https://brevis-shortener.herokuapp.com/
+https://brevish.herokuapp.com/
 
 ## Brevis URL Shortener
 Brevis accepts a POST request to `/shorten` containing a JSON formatted as such:
