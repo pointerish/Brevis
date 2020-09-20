@@ -1,16 +1,36 @@
-# Brevis
-A simple URL shortener API with Python and Flask.
+![](https://img.shields.io/badge/Python-Flask-blueviolet)
 
-Brevis is live at:
-https://brevish.herokuapp.com/
+# Brevish | A Dead Simple URL Shortener
 
-## Brevis URL Shortener
-Brevis accepts a POST request to `/shorten` containing a JSON formatted as such:
+Brevish is a simple URL shortener written in Python using the Flask Web Framework.
 
-`{"url":"Long URL goes here."}`
+![Demo](static/brevish.gif)
 
-This POST request will return a json containing an ID for the URL. The client should then send a GET request to `https://brevis-shortener.herokuapp.com/URLID` which will redirect to the original URL.
 
-Of course, the Heroku domain is long and beats the purpose of the shortener, but this is just a proof of concept and a learning project.
+## Built With
+- Python & Flask
+- HTML & CSS
 
-NOTE: There is already another URL shortener called Brevis.
+## Live Demo
+
+[Live Demo Link](https://brevish.herokuapp.com/)
+
+## Author
+
+**Josias Alvarado**
+
+- GitHub: [@pointerish](https://github.com/pointerish)
+- Twitter: [@pointerish](https://twitter.com/pointerish)
+- LinkedIn: [Josias Alvarado](https://www.linkedin.com/in/josias-alvarado-80901878/)
+
+##  Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## License
+
+This project is [MIT](./LICENSE) licensed.
