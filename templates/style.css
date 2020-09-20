@@ -13,7 +13,27 @@ body {
 
 .header-title {
     font-size: 55px;
-}
+    overflow: hidden; 
+    border-right: .15em solid black; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }
+
 
 .header-description {
     font-size: 18px;
@@ -26,7 +46,7 @@ body {
     margin: 200px;
     background-color: rgb(255, 255, 255);
     border: solid rgb(235, 235, 224) 2px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .main-wrapper {
@@ -43,8 +63,13 @@ body {
     height: 60px;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .f-size {
-    width: 400px;
+    width: 450px;
+    height: 40px;
     border: solid rgb(235, 235, 224) 2px;
     border-right: none;
 }
@@ -52,9 +77,16 @@ body {
 .submit-button {
     position: absolute;
     width: 150px;
+    height: 46px;
     border-left: none;
     border: solid rgb(235, 235, 224) 2px;
+    transition: 0.3s;
 }
+
+.submit-button:hover {
+    background-color: rgb(51, 153, 255);
+    color: white;
+  }
 
 .footer-text {
     text-align-last: center;
