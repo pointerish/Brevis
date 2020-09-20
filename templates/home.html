@@ -1,15 +1,40 @@
-<html>
-    <head>
-        <title>Brevish URL Shortener</title>
-    </head>
-    <body>
-        <h1>Brevis<i>h</i> URL Shortener</h1>
-        <p>Brevis<i>h</i> accepts a POST request to <i>/shorten</i> containing a JSON formatted as such:<br/><li>{"url":"Long URL goes here."}</li><br/>
-        This POST request will return a json like this:<br/> <li> {shortened_url : URLID}</li></p> <p>The client should then send a GET request to
-        https://brevis-shortener.herokuapp.com/URLID which will redirect to the original URL.</p>
-        <p> Of course, the Heroku domain is long and beats the purpose of the shortener, but this is just a proof of concept and a learning 
-        project.</p> 
-        <p>Note: There is another URL Shortener tool called Brevis which is way nicer and with a nice looking UI here: https://brevisapp.herokuapp.com/ </p>
-        <p>I had no intentions to plagiarize and that's why I've added an h to the name of mine.</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brevis</title>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="d-flex main-container">
+        <header class="header-contents">
+            <h1 class="t-align header-title">Brevish</h1>
+            <p class="t-align header-description">A Dead Simple URL Shortener</p>
+        </header>
+        <main class="main-wrapper">
+            <div class="form-wrapper">
+                <form action="/shorten" method="POST">
+                    <div class="form-container">
+                        <input class="f-size" type="text" placeholder="https://stupidly-long-url-to-shorten-because-its-horrible.com"/>
+                        <button class ="f-size submit-button" type="submit">
+                            <ion-icon name="code-outline"></ion-icon>
+                                Shorten!
+                            <ion-icon name="code-slash-outline"></ion-icon>
+                        </button>
+                    </div>
+                    <div id="shortened-url"></div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-text">
+            <p>Made with <ion-icon name="heart"></ion-icon> by <a class="author-name" href="https://github.com/pointerish">Josias Alvarado</a></p>
+            <p>Check the project on <a href="https://github.com/pointerish/Brevis">Github</a></p>
+        </div>
+    </footer>
+</body>
 </html>
