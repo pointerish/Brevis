@@ -1,94 +1,99 @@
 body {
-    background-color: rgb(179, 217, 255);
-    font-family: 'Inconsolata';
+  background-color: rgb(179, 217, 255);
+}
+
+.inconsolata {
+  font-family: 'Inconsolata';
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .t-align {
-    text-align: center;
+  text-align: center;
 }
 
 .header-title {
-    font-size: 55px;
-    overflow: hidden; 
-    border-right: .15em solid black; 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .15em;
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+  font-size: 55px;
+  overflow: hidden; 
+  border-right: .15em solid black; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em;
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret .75s step-end infinite;
   }
   
   /* The typing effect */
   @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  from { width: 0 }
+  to { width: 100% }
   }
   
   @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
+  from, to { border-color: transparent }
+  50% { border-color: black; }
   }
 
 
 .header-description {
-    font-size: 18px;
-    font-weight: lighter;
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 .main-container {
-    flex-direction: column;
-    align-items: center;
-    margin: 300px;
+  flex-direction: column;
+  align-items: center;
+  margin: 300px;
 }
 
 .main-wrapper {
-    margin: 20px;
+  margin: 20px;
 }
 
 .form-container {
-    align-items: center;
+  align-items: center;
 }
 
 .form-container {
-    position: relative;
-    margin-left: -100px;
-    height: 60px;
+  position: relative;
+  margin-left: -100px;
+  height: 60px;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus, 
+input:focus,
+.submit-button:focus {
+  outline: none;
 }
 
 .f-size {
-    width: 450px;
-    height: 40px;
-    border: solid rgb(235, 235, 224) 2px;
-    border-right: none;
+  width: 450px;
+  height: 40px;
+  border: solid rgb(235, 235, 224) 2px;
+  border-right: none;
 }
 
 .submit-button {
-    position: absolute;
-    width: 150px;
-    height: 46px;
-    border-left: none;
-    border: solid rgb(235, 235, 224) 2px;
-    transition: 0.3s;
+  position: absolute;
+  width: 150px;
+  height: 46px;
+  border-left: none;
+  border: solid rgb(235, 235, 224) 2px;
+  transition: 0.3s;
 }
 
 .submit-button:hover {
-    background-color: rgb(51, 153, 255);
-    color: white;
+  background-color: rgb(51, 153, 255);
+  color: white;
   }
 
 .footer-text {
-    text-align-last: center;
+  text-align-last: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
