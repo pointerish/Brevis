@@ -6,6 +6,7 @@ from flask import request
 from flask import redirect
 from flask import render_template
 
+
 app = Flask(__name__)
 
 @app.route('/shorten', methods=['POST', 'GET'])
