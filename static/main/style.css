@@ -58,10 +58,12 @@ body {
 .url-box {
   width: 70vw;
   height: 5vh;
+  border-radius: 4px;
 }
 
 .submit-button {
   height: 5.5vh;
+  border-radius: 4px;
 }
 
 .button-text {
